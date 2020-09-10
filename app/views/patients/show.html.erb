@@ -1,0 +1,22 @@
+<p><h1>Patient Details</h1></p>
+
+<p>
+  <strong>Patient Name:</strong>
+  <%= @patient.name %>
+ </p>
+ 
+ <p>
+   <strong>Adress:</strong>
+   <%= @patient.text %>
+  </p>
+  <p>
+  <strong>Test_Date:</strong>
+  <%= @patient.test_date %>
+ </p>
+ <p>
+  <strong>Test_Result:</strong>
+  <%= @patient.test_result %>
+ </p>
+  <%= link_to 'Edit', edit_patient_path(@patient) %> |
+  <%= link_to 'Back', patients_path %>
+

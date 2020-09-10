@@ -1,0 +1,45 @@
+<h1>Edit Details</h1>
+ 
+<%= form_with(model: @patient, local: true) do |form| %>
+ 
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@patient.errors.count, "error") %> prohibited
+        this patients from being saved:
+      </h2>
+      <ul>
+        <% @patient.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+<p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :adress %><br>
+    <%= form.text_area :text %>
+  </p>
+<p>
+    <%= form.label :test_date %><br>
+    <%= form.text_field :test_date %>
+  </p>
+ <p>
+    <%= form.label :test_result %><br>
+    <%= form.text_field :test_result %>
+  </p>
+ 
+  
+  <p>
+     <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', patients_path %>
+
